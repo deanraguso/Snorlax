@@ -4,10 +4,12 @@
   "version": "1.0",
   "manifest_version": 3,
   "background": {
-    "service_worker": "index.js"
+    "service_worker": "background.js"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "activeTab",
+    "scripting"
   ],
   "action": {
     "default_popup": "index.html",
