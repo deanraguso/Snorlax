@@ -1,5 +1,17 @@
 @import url('/src/styles/button.css');
 
+@font-face {
+  font-family: 'pokmon_ds_fontregular';
+  src: url('pokemon-ds-font-webfont.woff2') format('woff2'),
+       url('pokemon-ds-font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "pokmon_ds_fontregular";
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -32,6 +44,10 @@ body:after {
   z-index: -1;
   animation: animatedgradient 3s ease alternate infinite;
   background-size: 300% 300%;
+}
+
+h1 {
+  font-size: xx-large;
 }
 
 @keyframes animatedgradient {
