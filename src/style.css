@@ -1,5 +1,5 @@
 @import url('/src/styles/button.css');
-@import url('/src/styles/pokemon_box.css');
+@import url('/src/styles/rainbow_border.css');
 
 @font-face {
   font-family: 'pokmon_ds_fontregular';
@@ -13,38 +13,41 @@
   font-family: "pokmon_ds_fontregular";
 }
 
+textarea {
+  font-size: 20px;
+  padding: 8px;
+  width: 300px;
+  height: 350px;
+  line-height: 16px;
+  margin-bottom: 8px;
+  background: white;
+  overflow: overlay;
+  resize: none;
+}
+
+textarea:focus-visible {
+  outline: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #708090;
   width: 100%;
   color: white;
   padding: 4px;
-  margin: 0;
   height: 500px;
   width: 350px;
-}
 
-.rainbow-border {
   --borderWidth: 2px;
   justify-content: center;
   background: #708090;
   position: relative;
-  margin: var(--borderWidth);
+  margin: 0;
 }
 
-.rainbow-border:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-  z-index: -1;
-  animation: animatedgradient 3s ease alternate infinite;
-  background-size: 300% 300%;
+body {
+  margin: 0;
 }
 
 h1 {

@@ -1,0 +1,20 @@
+.rainbow-border {
+	--angle: 0deg;
+  --margin: 3px;
+  display: flex;
+	border: var(--margin) solid;
+	border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+	animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
