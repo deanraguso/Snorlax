@@ -14,13 +14,13 @@
 }
 
 textarea {
-  font-size: 20px;
-  padding: 8px;
+  font-size: 28px;
+  padding: 4px;
   width: 300px;
   height: 350px;
-  line-height: 16px;
+  line-height: 28px;
   margin-bottom: 8px;
-  background: white;
+  background: #F8EADC;
   overflow: overlay;
   resize: none;
 }
@@ -34,11 +34,10 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  color: white;
   padding: 4px;
   height: 500px;
   width: 350px;
-
+  color: #F8EADC;
   --borderWidth: 2px;
   justify-content: center;
   background: #708090;
