@@ -1,12 +1,17 @@
 (window.onload = function () {
   const snorlax = document.getElementById("Snorlax");
+  const updateKeys = document.getElementById("UpdateKeys");
 
-  const handleSnorlax = () => {
-    alert("Yawn!!")
-    // chrome.runtime.sendMessage({ type: "snorlax" }, (response) =>
-    //   console.log(response)
-    // );
-  };
+  if (snorlax && updateKeys) {
+    const handleSnorlax = () => {
+      alert("Yawn!!");
+    };
 
-  snorlax.addEventListener("click", e => handleSnorlax());
+    const handleUpdateKeys = () => {
+      alert("Handle update keys!!!");
+    };
+
+    snorlax.addEventListener("click", handleSnorlax);
+    updateKeys.addEventListener("click", handleUpdateKeys)
+  }
 })();
