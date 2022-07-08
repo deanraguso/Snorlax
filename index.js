@@ -1,3 +1,12 @@
-// window.find("snorlax")page in js
-
-// Until I figure out how to chuck these into another file
+setTimeout(() => {
+  chrome.storage.sync.get(["snorlaxKeys"], ({ snorlaxKeys }) => {
+    if (snorlaxKeys) {
+      snorlaxKeys
+        .replaceAll(" ", "")
+        .split(",")
+        .forEach((key) => {
+          alert(key);
+        });
+    }
+  });
+});
