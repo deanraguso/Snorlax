@@ -1,3 +1,7 @@
+const handleMatch = (key) => {
+  alert(`"${key}" is on this page!`)
+}
+
 const keysAlert = () => {
   setTimeout(() => {
     chrome.storage.sync.get(["snorlaxKeys"], ({ snorlaxKeys }) => {
@@ -6,7 +10,7 @@ const keysAlert = () => {
           .replaceAll(" ", "")
           .split(",")
           .forEach((key) => {
-            alert(key);
+            window.find(key) && handleMatch(key);
           });
       }
     });
