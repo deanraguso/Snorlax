@@ -6,7 +6,7 @@
   "background": {
     "service_worker": "src/scripts/background.js"
   },
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["https://*/*", "http://*/*"],
